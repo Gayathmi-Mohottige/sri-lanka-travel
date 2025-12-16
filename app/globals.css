@@ -19,8 +19,73 @@
   }
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Featured Tours – Elevated Center Carousel */
+.featuredToursSwiper .swiper-slide {
+  opacity: 0.45;
+  transform: scale(0.88) translateY(40px);
+  transition: all 0.5s ease;
+}
+
+.featuredToursSwiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.02) translateY(0);
+  z-index: 20;
+}
+
+.featuredToursSwiper .swiper-slide-active .tour-card {
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.25),
+    0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide default Swiper navigation */
+.featuredToursSwiper .swiper-button-prev,
+.featuredToursSwiper .swiper-button-next {
+  display: none !important;
+}
+
+/* Ensure custom buttons are positioned correctly */
+.custom-prev,
+.custom-next {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* Remove the shadow line issue by adjusting the gradient */
+.featuredToursSwiper .tour-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  pointer-events: none;
+  border-radius: 0 0 24px 24px;
+}
+
+/* Allow elevated slides to overflow */
+.featuredToursSwiper,
+.featuredToursSwiper .swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+

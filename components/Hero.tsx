@@ -23,10 +23,11 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-md text-lg">
+            <button className="bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg">
               Explore Tours
             </button>
-            <button className="border border-white px-8 py-3 rounded-md text-lg hover:bg-white hover:text-black">
+
+            <button className="border border-white px-8 py-3 rounded-full text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-md">
               Plan Your Trip
             </button>
           </div>
