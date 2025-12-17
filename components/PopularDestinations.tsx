@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const destinations = [
   {
     name: "Sigiriya",
@@ -43,10 +45,12 @@ export default function PopularDestinations() {
         {/* Destination Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((destination) => (
-            <div
+            <Link
               key={destination.name}
-              className="relative h-[320px] rounded-3xl overflow-hidden group cursor-pointer"
+              href="/destinations"
+              className="block"
             >
+              <div className="relative h-[320px] rounded-3xl overflow-hidden group cursor-pointer">
               {/* Image */}
               <img
                 src={destination.image}
@@ -66,9 +70,9 @@ export default function PopularDestinations() {
                 </h3>
               </div>
             </div>
+            </Link>
           ))}
         </div>
-
       </div>
     </section>
   );

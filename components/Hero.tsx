@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
@@ -19,17 +21,26 @@ export default function Hero() {
 
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             Tailor-made journeys, unforgettable experiences, and authentic
-            Sri Lankan adventures.
+            Sri Lankan adventures
           </p>
-
+          
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+            {/* Explore Tours */}
+            <Link
+              href="/tours"
+              className="bg-teal-600 hover:bg-teal-700 px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+            >
               Explore Tours
-            </button>
+            </Link>
 
-            <button className="border border-white px-8 py-3 rounded-full text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-md">
+            {/* Plan Your Trip */}
+            <Link
+              href="/contact"
+              className="border border-white px-8 py-3 rounded-full text-lg hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-md"
+            >
               Plan Your Trip
-            </button>
+            </Link>
           </div>
         </div>
       </div>

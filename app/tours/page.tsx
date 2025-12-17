@@ -8,8 +8,21 @@ export default function ToursPage() {
 
         {/* Header */}
         <div className="text-center mb-20">
+          <span
+      className="
+        inline-flex items-center
+        px-4 py-1
+        text-sm font-medium
+        text-teal-700
+        bg-teal-100
+        rounded-full
+        mb-8
+      "
+    >
+      Our Tours
+    </span>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Tours
+            Explore Our Travel Experiences
           </h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
             All tours are flexible and can be customized to suit your travel style.

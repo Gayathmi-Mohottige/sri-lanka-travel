@@ -26,8 +26,19 @@ export default function ContactPage() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <span
+            className="
+              inline-block mb-4 px-4 py-1
+              text-sm font-medium
+              text-teal-700
+              bg-teal-100
+              rounded-full
+            "
+          >
             Contact Us
+          </span>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Let's Plan Your Sri Lanka Adventure
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Tell us about your travel plans and preferences.
